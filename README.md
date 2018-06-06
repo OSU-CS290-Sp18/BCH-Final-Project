@@ -58,6 +58,7 @@ Your team’s grade (out of 100 points) for the final project will be based on s
 	The app’s client interface communicates with the app’s server to create, read, update, and/or delete content in the back end data store.
 
 Remember, if your team does not do a demo for your project, you will receive a zero for it.
+
 Individual grades
 Your individual grade for the project will be based on your team’s grade and also on evidence of your meaningful participation in your team’s work on the project, including from these sources:
 
