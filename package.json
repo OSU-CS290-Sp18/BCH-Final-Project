@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "handlebars views/partials/photo.handlebars -f /public/photoTemplate.js",
+    "prestart": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/OSU-CS290-Sp18/BCH-Final-Project/issues"
   },
-  "homepage": "https://github.com/OSU-CS290-Sp18/BCH-Final-Project#readme"
+  "homepage": "https://github.com/OSU-CS290-Sp18/BCH-Final-Project#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "handlebars": "^4.0.11"
+  },
+  "devDependencies": {}
 }
