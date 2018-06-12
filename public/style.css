@@ -4,17 +4,24 @@ body {
   background-color: #f7f7f7;
 }
 
+
 .selection {
-  margin: 50px 10%;
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .option {
-  flex: 0 1 28%;
-  display: flex;
-  background-color: #fff;
+    flex: 0 0 33.3%;
+    display: flex;
+    height: auto;
+
 }
+
+img{
+    width: 100px;
+}
+
 
 .error-container {
   margin-top: 50px;
