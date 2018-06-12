@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "handlebars views/partials/photo.handlebars -f /public/photoTemplate.js",
+    "prestart": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -19,8 +21,14 @@
   "homepage": "https://github.com/OSU-CS290-Sp18/BCH-Final-Project#readme",
   "dependencies": {
     "express": "^4.16.3",
+<<<<<<< HEAD
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.11",
     "mongodb": "^3.0.10"
   }
+=======
+    "handlebars": "^4.0.11"
+  },
+  "devDependencies": {}
+>>>>>>> 1906719ae5eefd53fe62efa3832277e0333d4e50
 }
