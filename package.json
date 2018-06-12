@@ -9,41 +9,22 @@
     "build": "handlebars views/partials/photo.handlebars -f /public/photoTemplate.js",
     "prestart": "npm run build"
   },
-
   "repository": {
-
     "type": "git",
-
     "url": "git+https://github.com/OSU-CS290-Sp18/mongodb.git"
-
   },
-
   "author": "Bradley Cypert & Christopher Hoskins",
-
   "license": "none",
-
   "bugs": {
-
     "url": "https://github.com/OSU-CS290-Sp18/mongodb/issues"
-
   },
-
   "homepage": "https://github.com/OSU-CS290-Sp18/mongodb#readme",
-
   "dependencies": {
-
     "body-parser": "^1.18.3",
-
     "express": "^4.16.2",
-
     "express-handlebars": "^3.0.0",
-
     "handlebars": "^4.0.11",
-
     "mongo": "^0.1.0",
-
     "mongodb": "^3.0.10"
-
   }
-
 }
