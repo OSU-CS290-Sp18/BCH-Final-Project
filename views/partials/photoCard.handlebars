@@ -1,0 +1,17 @@
+<section class="photo-card">
+
+  <div class="img-container">
+    <img class="photo-img" src="{{photoURL}}" />
+  </div>
+
+  <div class="description">
+    {{description}}
+  </div>
+
+  {{#each tags}}
+    <div class="tag">
+      <a href="#">{{tag}}</a>
+    </div>
+  {{/each}}
+
+</article>
