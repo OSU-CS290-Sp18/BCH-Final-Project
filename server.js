@@ -30,7 +30,11 @@ app.get('/', function(req, res, next) {
 
 app.get('/:designator', function (req, res, next) {
     var designator = req.params.designator.toLowerCase();
-/*    var a = mongoDB.db.getCollectionNames().indexOf(designator)
+    /*db.collectionNames(function(err, collections){
+      console.log(collections);
+    });
+
+    var a = collections.indexOf(designator)
     if (a == -1) {
         res.status(500).send("Error fetching designator from DB.");
         next();
@@ -42,8 +46,8 @@ app.get('/:designator', function (req, res, next) {
                 res.status(500).send("Error fetching designator from DB.");
             } else {
                 res.status(200).render('singlePage', {
-		   designator: designator, 
-		   items: items
+                    designator: designator,
+                    items: items
                 });
             }
         });
