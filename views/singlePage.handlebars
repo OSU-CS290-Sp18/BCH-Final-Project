@@ -1,15 +1,10 @@
 <main class="single-page">
-
   <div class="title-container">
-    <h2>Photos of {{item}}</h2>
+    <h2>Photos of {{designator}}</h2>
   </div>
-
-  <div class="photo-card-container">
-
+  <div class="card-container">
     {{#each items}}
       {{> photoCard}}
     {{/each}}
-
   </div>
-
 </main>

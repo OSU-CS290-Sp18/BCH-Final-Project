@@ -42,7 +42,8 @@ app.get('/:designator', function (req, res, next) {
                 res.status(500).send("Error fetching designator from DB.");
             } else {
                 res.status(200).render('singlePage', {
-                    items: items
+		   designator: designator, 
+		   items: items
                 });
             }
         });
