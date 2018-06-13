@@ -11,6 +11,7 @@ var mongoPassword = process.env.MONGO_PASSWORD;
 var mongoDBName = process.env.MONGO_DB_NAME;
 
 var mongoURL = "mongodb://" + mongoUsername + ":" + mongoPassword + "@" + mongoHost + ":" + mongoPort + "/" + mongoDBName;
+console.log(mongoURL);
 var mongoDB = null;
  
 var app = express();
@@ -29,23 +30,23 @@ app.get('/', function(req, res, next) {
 
 app.get('/:designator', function (req, res, next) {
     var designator = req.params.designator.toLowerCase();
-    var a = mongoDB.getCollectionNames().indexOf(designator)
+/*    var a = mongoDB.db.getCollectionNames().indexOf(designator)
     if (a == -1) {
         res.status(500).send("Error fetching designator from DB.");
         next();
     }
-    else {
+    else {*/
         var itemCollection = mongoDB.collection(designator);
         itemCollection.find().toArray(function (err, items) {
             if (err) {
                 res.status(500).send("Error fetching designator from DB.");
             } else {
-                res.status(200).render('itemsPage', {
+                res.status(200).render('singlePage', {
                     items: items
                 });
             }
         });
-    }
+   /* }*/
 });
 
 
@@ -74,6 +75,16 @@ app.get('*', function (req, res) {
   res.status(404).render('404');
 });
 
-app.listen(port, function () {
-  console.log("== Server is listening on port", port);
+
+MongoClient.connect(mongoURL, function (err, client) {
+    if (err) {
+        throw err;
+    }
+    mongoDB = client.db(mongoDBName);
+    app.listen(port, function () {
+
+        console.log("== Server listening on port", port);
+
+    });
+
 });
