@@ -8,11 +8,11 @@ function getDesignatorFromURL() {
 }
 
 function handleModalAcceptClick() {
-
+  console.log("IVE BEEN CLICKED");
   var photoURL = document.getElementById('photo-url-input').value.trim();
   var description = document.getElementById('photo-description-input').value.trim();
   var tags = document.getElementById('photo-tags-input').value.trim();
-
+  
   if (!photoURL || !description || !tags) {
     alert("You must fill in all of the fields!");
   } else {
@@ -34,7 +34,7 @@ function handleModalAcceptClick() {
         var newCardHTML = cardTemplate({
           photoURL: photoURL,
           description: description,
-          tags: tags
+          tags: tags.split(" ")
         });
         var cardContainer = document.querySelector('.card-container');
         cardContainer.insertAdjacentHTML('beforeend', newCardHTML);

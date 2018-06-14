@@ -4,19 +4,16 @@ body {
     background-color: #002F6C;
 }
 
-header {
-    background-color: #002F6C;
-    color: #fff;
-    margin: 0;
-}
 
 a {
     text-decoration: none;
     color: #FFB81C;
 }
 
-a:hover {
-    color: #0c719e;
+img{
+    max-height: 100%;
+    max-width: 100%;
+
 }
 
 .site-title {
@@ -48,18 +45,13 @@ display: inline;
     padding: 10px 20px 10px 10px;
 }
 
-.navbar-search {
-    position:absolute;
-    right: 10px;
-    padding: 7px 0 0 0;
-}
-
 .selection {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
 }
+
 @media screen {
     .option {
         display: flex;
@@ -70,7 +62,6 @@ display: inline;
         cursor: pointer;
     }
 }
-
 
 .option:before {
     content: "";
