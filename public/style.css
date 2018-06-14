@@ -147,8 +147,8 @@ display: inline;
     border: none;
     border-radius: 30px;
     font-size: 30px;
-    background-color: #ee5e4b;
-    color: #fff;
+    background-color: #73381D;
+    color: #FFB81C;
     cursor: pointer;
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
 }
@@ -202,8 +202,9 @@ display: inline;
 }
 
 .action-button:hover {
-        background-color: #e78477;
+        background-color: rgba(255,184,28, 0.18);
         border-color: #333;
+        color: black;
 }
 
 .modal-dialog {
